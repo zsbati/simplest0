@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Hello, {{ username }}!</h1>
+    <a href="/change_password">Change Password</a><br>
+    <a href="/add_note">Add Note</a><br>
+    <a href="/logout">Logout</a>
+
+    <h2>Your Notes:</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note[0] }}</li>
+        {% else %}
+            <li>No notes found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
